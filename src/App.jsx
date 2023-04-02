@@ -1,4 +1,5 @@
 import "./App.scss";
+import data from "./data";
 
 function App() {
   return (
@@ -8,33 +9,30 @@ function App() {
         aria-label="Music Subscription"
       ></div>
       <div className="container">
-        <h2 className="container__title">Order Summary</h2>
-        <p className="container__para">
-          You can now listen to millions of songs, audiobooks, and podcasts on
-          any device anywhere you like!
-        </p>
+        <h2 className="container__title">{data.title}</h2>
+        <p className="container__para">{data.para}</p>
         <div className="container__plan">
           <img
-            src="./src/assets/images/icon-music.svg"
+            src={data.img}
             alt="music"
             className="container__plan-music"
             aria-label="Music"
           />
           <div className="container__plan-center">
-            <h2 className="container__plan-center-title">Annual Plan</h2>
-            <p className="container__plan-center-price">$59.99/year</p>
+            <h2 className="container__plan-center-title">{data.plan}</h2>
+            <p className="container__plan-center-price">{data.price}</p>
           </div>
           <a href="#" className="container__plan-anchor">
-            Change
+            {data.change}
           </a>
         </div>
       </div>
       <div className="btn__container">
         <button className="btn__container-payment" aria-label="Proceed Payment">
-          Proceed Payment
+          {data.payment}
         </button>
         <button className="btn__container-cancel" aria-label="Cancel Order">
-          Cancel Order
+          {data.cancel}
         </button>
       </div>
     </section>
