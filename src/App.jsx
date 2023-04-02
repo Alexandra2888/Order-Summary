@@ -15,7 +15,7 @@ function App() {
         </p>
         <div className="container__plan">
           <img
-            src="src/assets/images/icon-music.svg"
+            src="./src/assets/images/icon-music.svg"
             alt="music"
             className="container__plan-music"
             aria-label="Music"
